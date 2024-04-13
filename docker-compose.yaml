@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+#  first:
+#    build:
+#      context: ./Simple
+#      dockerfile: Dockerfile
+#    command: ["python", "First.py"]
+
+  second:
+    image: python:3.8-slim
+    command: ["python", "./Python-Programs/First.py"]
+    volumes:
+      - ./Simple/First.py:/Python-Programs/First.py
